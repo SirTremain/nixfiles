@@ -1,0 +1,26 @@
+# Nix build outputs
+result
+result-*
+
+# Home Manager specific
+.home-manager-news-read-ids
+
+# Nix development
+.direnv/
+.envrc
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
