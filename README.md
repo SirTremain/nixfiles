@@ -1,2 +1,2 @@
-# home
-Personal home-manager configuration files
+# nixfiles
+Personal nix configuration files
