@@ -18,6 +18,7 @@
   imports = [
     ./programs/bat.nix
     ./programs/vscode.nix
+    ./programs/fonts.nix
   ];
 
   home.sessionVariables = {
