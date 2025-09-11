@@ -17,13 +17,10 @@
     pkgs.bat
   ];
 
-  programs.bat = {
-    enable = true;
-    config = {
-      theme = "TwoDark";
-      style = "numbers,changes";
-    };
-  };
+  imports = [
+    ./programs/bat.nix
+    ./programs/vscode.nix
+  ];
 
   home.sessionVariables = {
     # EDITOR = "emacs";
