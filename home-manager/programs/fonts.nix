@@ -13,5 +13,6 @@
   home.packages = with pkgs; [
     jetbrains-mono
     nerd-fonts.hack
+    nerd-fonts.caskaydia-cove
   ];
 }

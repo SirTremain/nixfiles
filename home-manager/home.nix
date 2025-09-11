@@ -1,8 +1,12 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   home.username = "tremain";
   home.homeDirectory = "/home/tremain";
+  home.packages = with pkgs; [
+    nixgl.auto.nixGLNvidia
+  ];
+
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -19,6 +23,7 @@
     ./programs/bat.nix
     ./programs/vscode.nix
     ./programs/fonts.nix
+    ./programs/kitty.nix
   ];
 
   home.sessionVariables = {
