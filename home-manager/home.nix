@@ -13,9 +13,7 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  home.packages = [
-    pkgs.bat
-  ];
+  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./programs/bat.nix
