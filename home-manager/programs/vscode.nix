@@ -21,7 +21,6 @@
         ms-azuretools.vscode-containers
         ms-azuretools.vscode-docker
 
-        
         # Productivity
         ms-vscode-remote.remote-ssh
         ms-vscode.remote-explorer
@@ -58,7 +57,7 @@
         ms-toolsai.vscode-jupyter-slideshow
 
         # Typescript
-        biomejs.biome
+        # biomejs.biome
         ecmel.vscode-html-css
         graphql.vscode-graphql-syntax
         wholroyd.jinja
@@ -106,7 +105,7 @@
         
         "python.formatting.provider" = "black";
         "python.analysis.typeCheckingMode" = "basic";
-        "ruff.args" = [ "--ignore" "F401" "--ignore" "F841" ];
+        "ruff.lint.ignore" = ["F401" "F841"];
         "editor.wordWrapColumn" = 120;
         "redhat.telemetry.enabled" = true;
         
@@ -170,7 +169,7 @@
         };
         
         "ruff.importStrategy" = "fromEnvironment";
-        "ruff.logLevel" = "warn";
+        "ruff.logLevel" = "warning";
         "editor.formatOnSave" = true;
         
         "files.associations" = {
@@ -207,7 +206,7 @@
         };
         
         "github.copilot.advanced" = { };
-        "terminal.integrated.enableMultiLinePasteWarning" = false;
+        "terminal.integrated.enableMultiLinePasteWarning" = "never";
         "explorer.autoReveal" = false;
         "workbench.colorTheme" = "Default Dark+";
         "editor.fontFamily" = "'Iosevka Custom', monospace";
