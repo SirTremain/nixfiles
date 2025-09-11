@@ -25,6 +25,7 @@
     ./programs/vscode.nix
     ./programs/fonts.nix
     ./programs/kitty.nix
+    ./programs/starship.nix
   ];
 
   home.sessionVariables = {
