@@ -5,50 +5,50 @@
     enable = true;
     
     # Extensions - these will be automatically installed
-    extensions = with pkgs.vscode-extensions; [
-      # Language support
-      ms-python.python
-      rust-lang.rust-analyzer
-      
+    extensions = with pkgs.vscode-extensions; [      
       # Nix support (perfect for your nixfiles!)
       bbenoist.nix
       
       # Git and version control
       eamodio.gitlens
+
+      # Devcontainers
+      docker.docker
+      ms-vscode-remote.remote-containers
+      ms-vscode-remote.remote-ssh
+      ms-vscode-remote.remote-ssh-edit
+      ms-vscode.remote-explorer
+      ms-azuretools.vscode-containers
+      ms-azuretools.vscode-docker
+
       
       # Productivity
       ms-vscode-remote.remote-ssh
       ms-vscode.remote-explorer
+      github.copilot
+      github.copilot-chat
       
       # Themes and appearance
       dracula-theme.theme-dracula
-      pkief.material-icon-theme
+      vscode-icons-team.vscode-icons
+      weiyuwang.night-owl-oled-dim
+      chadbaileyvh.oled-pure-black---vscode
+      #pkief.material-icon-theme
       
       # Development tools
       ms-vscode.live-server
       esbenp.prettier-vscode
+      njpwerner.autodocstring
       
       # Add more as needed - search available extensions at:
       # https://search.nixos.org/packages?type=packages&query=vscode-extensions
 
-      4ops.packer
-      biomejs.biome
-      chadbaileyvh.oled-pure-black---vscode
+      # rust
+      ms-python.python
+      rust-lang.rust-analyzer
+
+      # Python
       charliermarsh.ruff
-      docker.docker
-      dvirtz.parquet-viewer
-      eamodio.gitlens
-      ecmel.vscode-html-css
-      esbenp.prettier-vscode
-      github.copilot
-      github.copilot-chat
-      graphql.vscode-graphql-syntax
-      hashicorp.terraform
-      hediet.vscode-drawio
-      jaimeolivares.yuml
-      mechatroner.rainbow-csv
-      ms-azuretools.vscode-containers
-      ms-azuretools.vscode-docker
       ms-python.black-formatter
       ms-python.debugpy
       ms-python.python
@@ -59,31 +59,40 @@
       ms-toolsai.jupyter-renderers
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
-      ms-vscode-remote.remote-containers
-      ms-vscode-remote.remote-ssh
-      ms-vscode-remote.remote-ssh-edit
-      ms-vscode.remote-explorer
-      njpwerner.autodocstring
-      pjmiravalle.terraform-advanced-syntax-highlighting
-      redhat.java
-      redhat.vscode-yaml
-      rust-lang.rust-analyzer
-      sandorengholm.csspreview
-      tamasfe.even-better-toml
-      tomoki1207.pdf
-      visualstudioexptteam.intellicode-api-usage-examples
-      visualstudioexptteam.vscodeintellicode
-      vscjava.vscode-gradle
-      vscjava.vscode-java-debug
-      vscjava.vscode-java-dependency
-      vscjava.vscode-java-pack
-      vscjava.vscode-java-test
-      vscjava.vscode-maven
-      vscode-icons-team.vscode-icons
-      weiyuwang.night-owl-oled-dim
+
+      # Typescript
+      biomejs.biome
+      ecmel.vscode-html-css
+      graphql.vscode-graphql-syntax
       wholroyd.jinja
       zignd.html-css-class-completion
 
+      # Terraform
+      hashicorp.terraform
+      pjmiravalle.terraform-advanced-syntax-highlighting
+
+      # Java
+      #redhat.java
+      #vscjava.vscode-gradle
+      #vscjava.vscode-java-debug
+      #vscjava.vscode-java-dependency
+      #vscjava.vscode-java-pack
+      #vscjava.vscode-java-test
+      #vscjava.vscode-maven
+
+      # Viewers
+      dvirtz.parquet-viewer
+      hediet.vscode-drawio
+      jaimeolivares.yuml
+      mechatroner.rainbow-csv
+      redhat.vscode-yaml
+      sandorengholm.csspreview
+      tamasfe.even-better-toml
+      tomoki1207.pdf
+
+      # Random
+      visualstudioexptteam.intellicode-api-usage-examples
+      visualstudioexptteam.vscodeintellicode
     ];
     
     # Settings (equivalent to settings.json)
