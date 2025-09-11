@@ -3,9 +3,10 @@
 {
   home.username = "tremain";
   home.homeDirectory = "/home/tremain";
-  home.packages = with pkgs; [
-    nixgl.auto.nixGLNvidia
-  ];
+
+  nixGL.packages = pkgs.nixgl;
+  nixGL.defaultWrapper = "nvidia";
+  nixGL.installScripts = [ "nvidia" ];
 
 
   # This value determines the Home Manager release that your configuration is
