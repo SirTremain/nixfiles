@@ -3,11 +3,20 @@
 {
   home.username = "tremain";
   home.homeDirectory = "/home/tremain";
-
-  nixGL.packages = pkgs.nixgl;
-  nixGL.defaultWrapper = "nvidia";
-  nixGL.installScripts = [ "nvidia" ];
-
+  
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
+  #config.nix.allowUnfree = true;
+  #config.nix.nvidia.acceptLicence = true;
+  
+  targets.genericLinux.gpu = {
+    enable = true;
+    nvidia = {
+      enable  = true;
+      version = "590.48.01";
+      sha256 = "sha256-ueL4BpN4FDHMh/TNKRCeEz3Oy1ClDWto1LO/LWlr1ok=";
+    };
+  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -17,8 +26,6 @@
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
-
-  nixpkgs.config.allowUnfree = true;
 
   imports = [
     ./programs/bat.nix

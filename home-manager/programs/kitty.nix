@@ -2,7 +2,6 @@
 
 {
   programs.kitty = {
-    package = config.lib.nixGL.wrap pkgs.kitty;
     enable = true;
     
     # Font configuration
