@@ -8,6 +8,18 @@
   nixpkgs.config.nvidia.acceptLicense = true;
   #config.nix.allowUnfree = true;
   #config.nix.nvidia.acceptLicence = true;
+
+  nixpkgs.overlays = [
+    (final: prev: {
+      pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+        (python-final: python-prev: {
+          picosvg = python-prev.picosvg.overridePythonAttrs (oldAttrs: {
+            doCheck = false;
+          });
+        })
+      ];
+    })
+  ];
   
   targets.genericLinux.gpu = {
     enable = true;
@@ -17,6 +29,8 @@
       sha256 = "sha256-ueL4BpN4FDHMh/TNKRCeEz3Oy1ClDWto1LO/LWlr1ok=";
     };
   };
+  # nix flake update
+  # nix-channel update
   # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/590.48.01/NVIDIA-Linux-x86_64-590.48.01.run
 
   # This value determines the Home Manager release that your configuration is
