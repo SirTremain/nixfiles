@@ -30,7 +30,8 @@
     };
   };
   # nix flake update
-  # nix-channel update
+  # nix-channel --update
+  # nvidia-smi
   # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/590.48.01/NVIDIA-Linux-x86_64-590.48.01.run
 
   # This value determines the Home Manager release that your configuration is
