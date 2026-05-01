@@ -28,14 +28,14 @@
     enable = true;
     nvidia = {
       enable  = true;
-      version = "595.58.03";
-      sha256 = "sha256-jA1Plnt5MsSrVxQnKu6BAzkrCnAskq+lVRdtNiBYKfk=";
+      version = "595.71.05";
+      sha256 = "sha256-NiA7iWC35JyKQva6H1hjzeNKBek9KyS3mK8G3YRva4I=";
     };
   };
   # nix flake update
   # nix-channel --update
   # nvidia-smi
-  # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/595.58.03/NVIDIA-Linux-x86_64-595.58.03.run
+  # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/595.71.05/NVIDIA-Linux-x86_64-595.71.05.run
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
