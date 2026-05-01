@@ -208,7 +208,7 @@
         "github.copilot.advanced" = { };
         "terminal.integrated.enableMultiLinePasteWarning" = "never";
         "explorer.autoReveal" = false;
-        "workbench.colorTheme" = "Default Dark+";
+        "workbench.colorTheme" = "Dark+";
         "editor.fontFamily" = "'Iosevka Custom', monospace";
         "editor.fontSize" = 14;
         "powermode.enabled" = true;
