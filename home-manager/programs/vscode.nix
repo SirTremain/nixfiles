@@ -2,7 +2,7 @@
 
 {
   programs.vscode = {
-    enable = true;
+    enable = false;
 
     profiles.default = {
       # Extensions - these will be automatically installed

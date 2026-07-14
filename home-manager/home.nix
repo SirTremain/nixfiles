@@ -4,9 +4,6 @@
   home.username = "tremain";
   home.homeDirectory = "/home/tremain";
 
-  
-
-  
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
   #config.nix.allowUnfree = true;
@@ -28,14 +25,14 @@
     enable = true;
     nvidia = {
       enable  = true;
-      version = "610.43.02";
-      sha256 = "sha256-MDSgVLtM33dS/43CclZMsQVROAS/9TU4lFkBsWyndGM=";
+      version = "610.43.03";
+      sha256 = "sha256-ReLUwTSiPDXlDyU6SqY+fl6NF+PRhdSgfIpY6WEu05I=";
     };
   };
   # nix flake update
   # nix-channel --update
   # nvidia-smi
-  # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/610.43.02/NVIDIA-Linux-x86_64-610.43.02.run
+  # nix store prefetch-file https://download.nvidia.com/XFree86/Linux-x86_64/610.43.03/NVIDIA-Linux-x86_64-610.43.03.run
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -48,10 +45,10 @@
 
   imports = [
     ./programs/bat.nix
-    ./programs/vscode.nix
     ./programs/fonts.nix
     ./programs/kitty.nix
     ./programs/starship.nix
+    ./programs/vscode.nix
   ];
 
   home.sessionVariables = {
